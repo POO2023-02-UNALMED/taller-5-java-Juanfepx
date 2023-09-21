@@ -20,7 +20,7 @@ public class Ave extends Animal {
         listado.add(this);
     }
 
-    public int cantidadaAves() {
+    public static int cantidadaAves() {
         return listado.size();
     }
 

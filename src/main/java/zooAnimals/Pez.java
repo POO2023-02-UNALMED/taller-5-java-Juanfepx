@@ -19,7 +19,7 @@ public class Pez extends Animal{
     public Pez(){
         listado.add(this);
     }
-    public int cantidadPeces(){
+    public static int cantidadPeces(){
         return listado.size();
     }
     public String  movimiento(){
