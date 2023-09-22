@@ -25,7 +25,7 @@ public class Ave extends Animal {
     }
 
     public String movimiento() {
-        return "Volar";
+        return "volar";
     }
 
     public static Ave crearHalcon(String nombre, int edad, String genero) {
