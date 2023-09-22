@@ -1,4 +1,4 @@
-package zooAnimals;
+package zooAnimales;
 
 import gestion.Zona;
 
@@ -10,8 +10,8 @@ public class Reptil extends Animal{
     public static int serpientes;
     private String colorEscamas;
     private int largoCola;
-    public Reptil(String colorEscamas,int largoCola,String nombre, int edad, String habitat, String genero, Zona zona){
-        super(nombre, edad, habitat, genero, zona);
+    public Reptil(String nombre, int edad, String habitat, String genero,String colorEscamas,int largoCola){
+        super(nombre, edad, habitat, genero);
         this.colorEscamas = colorEscamas;
         this.largoCola = largoCola;
         listado.add(this);
@@ -26,13 +26,20 @@ public class Reptil extends Animal{
     public String  movimiento(){
         return "reptar";
     }
-    public Reptil crearIguana(String nombre, int edad,String genero, Zona zona){
+    public static Reptil crearIguana(String nombre, int edad,String genero){
         iguanas++;
-        return new Reptil("verde",3,nombre,edad,"humedal",genero,zona);
+        return new Reptil(nombre,edad,"humedal",genero,"verde",3);
     }
-    public Reptil crearSerpiente(String nombre, int edad,String genero, Zona zona){
+    public static Reptil crearSerpiente(String nombre, int edad,String genero){
         serpientes++;
-        return new Reptil("blanco",1,nombre,edad,"jungla",genero,zona);
+        return new Reptil(nombre,edad,"jungla",genero,"blanco",1);
     }
 
+    public String getColorEscamas() {
+        return colorEscamas;
+    }
+
+    public int getLargoCola() {
+        return largoCola;
+    }
 }

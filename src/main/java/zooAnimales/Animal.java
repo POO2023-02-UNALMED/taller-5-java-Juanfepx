@@ -1,4 +1,4 @@
-package zooAnimals;
+package zooAnimales;
 
 import gestion.Zona;
 
@@ -10,7 +10,7 @@ public class Animal {
     private String genero;
     private Zona zona;
 
-    public Animal(String nombre, int edad, String habitat, String genero, Zona zona) {
+    public Animal(String nombre, int edad, String habitat, String genero) {
         totalAnimals++;
     }
 
@@ -23,7 +23,7 @@ public class Animal {
 
     }
 
-    public String totalPorTipo() {
+    public static String totalPorTipo() {
         return "Mamiferos:" + Mamifero.cantidadMamiferos() + "\n" + "Aves:" + Ave.cantidadaAves() + "\n" + "Reptiles:" + Reptil.cantidadReptiles() + "\n" + "Peces:" + Pez.cantidadPeces() + "\n" + "Anfibios:" + Anfibio.cantidadAnfibios();
     }
 
@@ -33,5 +33,21 @@ public class Animal {
         } else {
             return "Mi nombre es " + nombre + ",tengo una edad de " + edad + ", habito en " + habitat + " y mi genero es " + genero;
         }
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getHabitat() {
+        return habitat;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public String getGenero() {
+        return genero;
     }
 }
